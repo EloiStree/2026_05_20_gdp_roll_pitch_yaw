@@ -159,24 +159,12 @@ offset_bottom = -4.0
 [node name="LabelNesDebug" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1181414012]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "
-	DIR: 0.00,0.00,0.00,
-	ROLL X: 90.00
-	PITCH Z: 90.00
-	YAW Y: 90.00
-	JOYSTICK: 1.00,1.00
-	"
+text = "-"
 
 [node name="LabelQuestDebug" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1608246330]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "
-	DIR: 0.00,0.00,0.00,
-	ROLL X: 90.00
-	PITCH Z: 90.00
-	YAW Y: 90.00
-	JOYSTICK: 1.00,1.00
-	"
+text = "-"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1842331221]
 transform = Transform3D(0.8919002, -0.23961733, 0.3835331, 0, 0.8480886, 0.5298545, -0.45223236, -0.4725773, 0.75641036, 0.767877, 0.8400755, 0.798604)
@@ -200,6 +188,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_kwwsf")
 
 [node name="QuestJoystickFromController" parent="." unique_id=1029765999 instance=ExtResource("2_r0ldw")]
 transform = Transform3D(0.4916541, -0.1546706, 0.8569441, -0.18163133, 0.9442385, 0.27463374, -0.85163736, -0.2906727, 0.43614575, 0.54280037, 0.5634502, 0.25810286)
+
+[node name="MeshHand" parent="QuestJoystickFromController" index="1" unique_id=351523890]
+transform = Transform3D(0.155, 0, 0, 0, 0.155, 0, 0, 0, 0.155, 0.07694815, -0.10071194, -0.3597521)
 
 [node name="HeadAnchor" parent="QuestJoystickFromController/Joystick" parent_id_path=PackedInt32Array(1029765999, 221657654) index="1" unique_id=242588583]
 transform = Transform3D(0.03, 1.4901111e-08, -9.406358e-08, -1.490116e-08, 0.03, -1.583243e-08, 9.406357e-08, 1.5832477e-08, 0.03, 0.03856726, 0.0472728, -0.029544234)
