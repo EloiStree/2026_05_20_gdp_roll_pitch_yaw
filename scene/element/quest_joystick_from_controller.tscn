@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://6ikslca4ei8e"]
+
+[ext_resource type="Script" uid="uid://cqddu3xmcnnig" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/script/point_direction_from_node.gd" id="1_qtat5"]
+[ext_resource type="Script" uid="uid://decw23qgnqo7j" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/script/roll_pitch_yaw_from_direction_up.gd" id="2_m7ij7"]
+[ext_resource type="ArrayMesh" uid="uid://dbtse4v16jo5s" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/3d/j_toastie/vr_controller/vr_controller.obj" id="3_u807m"]
+[ext_resource type="Script" uid="uid://dbq5x7hyh3mna" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/script/emit_direction_of_node.gd" id="4_dpur1"]
+[ext_resource type="ArrayMesh" uid="uid://ducnn6f7fvv4m" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/3d/j_toastie/vr_headset/poly_headset.obj" id="5_2gkef"]
+[ext_resource type="Script" uid="uid://0y8mxvnjsk8y" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/script/joystick_3d_representation.gd" id="6_qq5tf"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kwwsf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_v7872"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_v7872"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kwwsf"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v7872"]
+
+[node name="QuestJoystickFromController" type="Node3D" unique_id=1029765999]
+transform = Transform3D(0.49165416, -0.1546706, 0.8569441, -0.18163133, 0.9442385, 0.27463365, -0.85163736, -0.2906727, 0.43614578, 0, 0, 0)
+
+[node name="Code" type="Node" parent="." unique_id=422916834]
+
+[node name="PointDirectionFromNode" type="Node" parent="Code" unique_id=2034490852 node_paths=PackedStringArray("cartesian_plan", "track_point", "debug_point")]
+script = ExtResource("1_qtat5")
+cartesian_plan = NodePath("../../MeshHeadset/CartesianPoint")
+track_point = NodePath("../../MeshHand")
+debug_point = NodePath("")
+metadata/_custom_type_script = "uid://cqddu3xmcnnig"
+
+[node name="RollPitchYawFromDirection" type="Node" parent="Code" unique_id=1894503165]
+script = ExtResource("2_m7ij7")
+angle_x_roll = 90.0
+angle_y_yaw = 90.0
+angle_z_pitch = 90.0
+simulated_joystick = Vector2(1, 1)
+metadata/_custom_type_script = "uid://decw23qgnqo7j"
+
+[node name="MeshHand" type="MeshInstance3D" parent="." unique_id=351523890]
+transform = Transform3D(0.155, 0, 0, 0, 0.155, 0, 0, 0, 0.155, -0.14632991, 0.07835473, -0.40673307)
+mesh = ExtResource("3_u807m")
+
+[node name="DirectionFlatSurfaceForward" type="Node3D" parent="MeshHand" unique_id=180522424]
+transform = Transform3D(1, 0, 0, 0, 0.61551017, -0.7881289, 0, 0.7881289, 0.61551017, 0, 0.85871816, -0.14261854)
+
+[node name="EmitDirectionOfNode" type="Node" parent="MeshHand/DirectionFlatSurfaceForward" unique_id=480740168 node_paths=PackedStringArray("node_to_observe")]
+script = ExtResource("4_dpur1")
+node_to_observe = NodePath("..")
+metadata/_custom_type_script = "uid://dbq5x7hyh3mna"
+
+[node name="DirectionCircleForward" type="Node3D" parent="MeshHand" unique_id=1806462973]
+transform = Transform3D(1, 0, 0, 0, -0.012740582, -0.9999188, 0, 0.9999188, -0.012740582, 0, 1.0104212, 0.017167158)
+
+[node name="EmitDirectionOfNode" type="Node" parent="MeshHand/DirectionCircleForward" unique_id=125477889 node_paths=PackedStringArray("node_to_observe")]
+script = ExtResource("4_dpur1")
+node_to_observe = NodePath("..")
+metadata/_custom_type_script = "uid://dbq5x7hyh3mna"
+
+[node name="MeshHeadset" type="MeshInstance3D" parent="." unique_id=759489345]
+transform = Transform3D(-7.649493e-09, 0, 0.175, 0, 0.175, 0, -0.175, 0, -7.649493e-09, 0.00017249677, -0.031012535, 0.016190745)
+mesh = ExtResource("5_2gkef")
+
+[node name="Label3D" type="Label3D" parent="MeshHeadset" unique_id=329228017]
+transform = Transform3D(-3.6892413e-08, 0, -0.844, 0, 0.844, 0, 0.844, 0, -3.6892413e-08, 0.54363626, 0.98108274, -0.0009860992)
+text = "
+	DIR: 0.00,0.00,0.00,
+	ROLL X: 90.00
+	PITCH Z: 90.00
+	YAW Y: 90.00
+	JOYSTICK: 1.00,1.00
+	"
+
+[node name="CenterEyesForward" type="Node3D" parent="MeshHeadset" unique_id=582276459]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5833322, 0.18074521, 2.549826e-08)
+
+[node name="EmitDirectionOfNode" type="Node" parent="MeshHeadset/CenterEyesForward" unique_id=1991643937 node_paths=PackedStringArray("node_to_observe")]
+script = ExtResource("4_dpur1")
+node_to_observe = NodePath("..")
+metadata/_custom_type_script = "uid://dbq5x7hyh3mna"
+
+[node name="CartesianPoint" type="MeshInstance3D" parent="MeshHeadset" unique_id=1695728774]
+transform = Transform3D(-7.212379e-09, 0, -0.165, 0, 0.165, 0, 0.165, 0, -7.212379e-09, 1.8623265, -0.6476393, -6.943941e-08)
+mesh = SubResource("SphereMesh_kwwsf")
+script = ExtResource("2_m7ij7")
+angle_x_roll = 90.0
+angle_y_yaw = 90.0
+angle_z_pitch = 90.0
+simulated_joystick = Vector2(1, 1)
+
+[node name="Dimension" type="MeshInstance3D" parent="." unique_id=981230298]
+transform = Transform3D(0.2, 0, 0, 0, 0.1, 0, 0, 0, 0.15, 0, 0, 0)
+visible = false
+mesh = SubResource("BoxMesh_v7872")
+
+[node name="Joystick" type="Node3D" parent="." unique_id=221657654]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, -0.29153073, -0.28135738)
+
+[node name="Joystick3dRepresentation" type="Node" parent="Joystick" unique_id=1731955528 node_paths=PackedStringArray("base_joystick_cartesian_plan", "joystick_head_point", "middle_stick")]
+script = ExtResource("6_qq5tf")
+base_joystick_cartesian_plan = NodePath("../BaseAnchor")
+joystick_head_point = NodePath("../HeadAnchor")
+middle_stick = NodePath("../MiddleStickAnchor")
+use_clamp = true
+joystick_head_radius = 0.03
+joystick_middle_radius = 0.015
+joystick_height = 0.06
+joystick_value = Vector2(1, 1)
+metadata/_custom_type_script = "uid://0y8mxvnjsk8y"
+
+[node name="HeadAnchor" type="Node3D" parent="Joystick" unique_id=242588583]
+transform = Transform3D(0.03, 1.4901109e-08, -9.49949e-08, -1.49011585e-08, 0.03, -1.5832432e-08, 9.4994896e-08, 1.583248e-08, 0.03, 0.03856726, 0.047272794, -0.029544204)
+
+[node name="HeadMesh" type="MeshInstance3D" parent="Joystick/HeadAnchor" unique_id=1759767547]
+transform = Transform3D(1, 4.501397e-07, -4.3461677e-07, -4.5013928e-07, 1, 9.93411e-07, 4.3461722e-07, -9.934108e-07, 1, -0.0055805445, 0.09181976, 0.0027852058)
+mesh = SubResource("SphereMesh_v7872")
+
+[node name="BaseAnchor" type="Node3D" parent="Joystick" unique_id=596154951]
+transform = Transform3D(1.0000001, 0, 0, -1.4901161e-08, 1.0000001, 0, 2.9802322e-08, -2.9802322e-08, 1, 0, 0.012063324, 0)
+
+[node name="BaseMesh" type="MeshInstance3D" parent="Joystick/BaseAnchor" unique_id=595483020]
+transform = Transform3D(-0.10147398, -2.3283064e-10, 1.8626451e-09, -3.7252903e-09, 0.020947011, -1.8626451e-09, -3.7252903e-09, 9.313226e-10, 0.059527323, -1.1920929e-07, -0.012063265, 0)
+mesh = SubResource("BoxMesh_kwwsf")
+
+[node name="MiddleStickAnchor" type="Node3D" parent="Joystick" unique_id=484823412]
+transform = Transform3D(0.009852013, -0.005913824, -0.03856725, -0.0013704693, 0.012068145, -0.035209473, 0.011227628, 0.0066623227, 0.029544221, 0.01928363, 0.029668055, -0.014772117)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Joystick/MiddleStickAnchor" unique_id=1392421582]
+transform = Transform3D(1, 0, 0, 0, -2.339115e-08, 1, 0, -0.53512716, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_v7872")
+
+[connection signal="direction_updated" from="Code/PointDirectionFromNode" to="Code/RollPitchYawFromDirection" method="set_direction_to_generate_xyz_angles"]
+[connection signal="on_joystick_updated" from="Code/RollPitchYawFromDirection" to="Joystick/Joystick3dRepresentation" method="set_joystick_value"]
+[connection signal="on_text_debug" from="Code/RollPitchYawFromDirection" to="MeshHeadset/Label3D" method="set_text"]

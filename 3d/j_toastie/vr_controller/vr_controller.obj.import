@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dbtse4v16jo5s"
+path="res://.godot/imported/vr_controller.obj-62f1a6e5df607928deca33c8add3a9fa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/vr_controller.obj-62f1a6e5df607928deca33c8add3a9fa.mesh"]
+
+source_file="res://addons/2026_05_20_gdp_roll_pitch_yaw/3d/j_toastie/vr_controller/vr_controller.obj"
+dest_files=["res://.godot/imported/vr_controller.obj-62f1a6e5df607928deca33c8add3a9fa.mesh", "res://.godot/imported/vr_controller.obj-62f1a6e5df607928deca33c8add3a9fa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

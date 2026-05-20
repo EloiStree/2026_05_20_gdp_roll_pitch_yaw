@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://125k7mnmqgam"]
+
+[ext_resource type="PackedScene" uid="uid://dwl0kft7ib2vf" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/3d/nes/nes.fbx" id="1_mwssw"]
+
+[node name="NES" unique_id=111283668 instance=ExtResource("1_mwssw")]

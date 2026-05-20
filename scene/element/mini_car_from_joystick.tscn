@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ccafivnarbher"]
+
+[ext_resource type="Script" uid="uid://cbi561kdytvw" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/script/mini_car_from_joystick.gd" id="1_tpyms"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rggrn"]
+size = Vector3(0.036, 0.033, 0.07)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3cph6"]
+size = Vector3(0.036, 0.033, 0.07)
+
+[node name="MiniCarFromJoystick" type="CharacterBody3D" unique_id=1584812126]
+script = ExtResource("1_tpyms")
+metadata/_custom_type_script = "uid://cbi561kdytvw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=857732797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017, 0)
+shape = SubResource("BoxShape3D_rggrn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1617186450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017, 0)
+mesh = SubResource("BoxMesh_3cph6")

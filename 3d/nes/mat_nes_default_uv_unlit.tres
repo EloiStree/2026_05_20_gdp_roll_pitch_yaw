@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c87cqrxsaric6"]
+
+[ext_resource type="Texture2D" path="res://addons/2026_01_18_gdp_nes_controller_udp/assets/3d/nes/NES_UV_COLOR.png" id="1_eycn6"]
+
+[resource]
+cull_mode = 2
+depth_draw_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_eycn6")

@@ -1,0 +1,229 @@
+[gd_scene format=4 uid="uid://b1p85o6a0nqdf"]
+
+[ext_resource type="Script" uid="uid://bf1t8hcit5wjm" path="res://addons/2026_05_19_gdp_gizmo_debug/script/gizmo_change_color_mesh_instance_tool.gd" id="1_r0ldw"]
+[ext_resource type="PackedScene" uid="uid://6ikslca4ei8e" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/scene/element/quest_joystick_from_controller.tscn" id="2_r0ldw"]
+[ext_resource type="PackedScene" uid="uid://ccafivnarbher" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/scene/element/mini_car_from_joystick.tscn" id="4_dxp7r"]
+[ext_resource type="PackedScene" uid="uid://bevotsrh5u3h0" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/scene/element/joystick_and_nes.tscn" id="8_84cde"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d56as"]
+_surfaces = [{
+"aabb": AABB(-0.168274, -0.499957, -0.194305, 0.336548, 0.998121, 0.291458),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAADAAEAAAACAAMABAAFAAYABQAHAAYABwAEAAYABwAFAAQA"),
+"name": "Cone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/3///6mqAAD/f1OcAAAAAP//U5z//wAAAABTnP//AABZvS6dkNMAAP9/Lp3cWAAA/38AAKmqAAClQi6dkNMAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dxp7r"]
+_surfaces = [{
+"aabb": AABB(-0.168274, -0.499957, -0.194305, 0.336548, 0.998121, 0.291458),
+"attribute_data": PackedByteArray("/z//v/8/joI0dbfeNPW33v+/joLKirfe/z//vzR1t97KCrfe/z//v8oKt97/P46CNHW33v8/joL/P/+/yoq33v+/joI09bfeygq33jR1t97/P/+//z+OgsoKt97/P/+/"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcA"),
+"name": "Cone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/3///6mq+d3/f1OcAAD53f//U5z///nd//9TnP///z//f1OcAAD/PwAAU5z///8//3///6mq+on//1Oc///6iQAAU5z///qJ/3///6mq+d0AAFOc///53f9/U5wAAPndWb0unZDT0B7/fy6d3FjQHv9/AACpqtAepUIunZDT/7//fy6d3Fj/v1m9Lp2Q0/+/pUIunZDT6HxZvS6dkNPofP9/AACpquh8/38undxY0B6lQi6dkNPQHv9/AACpqtAeT7ojVE+6I1RPuiNUAAD/fwAA/38AAP9/////f////3////9/ItSvxSLUr8Ui1K/F8C9UNPAvVDTwL1Q0////f////3////9/AAD/fwAA/38AAP9/qkvvr6pL76+qS++v")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d56as")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nuck"]
+albedo_color = Color(0.99696165, 0.35912493, 0.57795936, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rggrn"]
+_surfaces = [{
+"aabb": AABB(-0.168274, -0.499957, -0.194305, 0.336548, 0.998121, 0.291458),
+"attribute_data": PackedByteArray("/z//v/8/joI0dbfeNPW33v+/joLKirfe/z//vzR1t97KCrfe/z//v8oKt97/P46CNHW33v8/joL/P/+/yoq33v+/joI09bfeygq33jR1t97/P/+//z+OgsoKt97/P/+/"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcA"),
+"name": "Cone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/3///6mq+d3/f1OcAAD53f//U5z///nd//9TnP///z//f1OcAAD/PwAAU5z///8//3///6mq+on//1Oc///6iQAAU5z///qJ/3///6mq+d0AAFOc///53f9/U5wAAPndWb0unZDT0B7/fy6d3FjQHv9/AACpqtAepUIunZDT/7//fy6d3Fj/v1m9Lp2Q0/+/pUIunZDT6HxZvS6dkNPofP9/AACpquh8/38undxY0B6lQi6dkNPQHv9/AACpqtAeT7ojVE+6I1RPuiNUAAD/fwAA/38AAP9/////f////3////9/ItSvxSLUr8Ui1K/F8C9UNPAvVDTwL1Q0////f////3////9/AAD/fwAA/38AAP9/qkvvr6pL76+qS++v")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d56as")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cph6"]
+albedo_color = Color(0.44494945, 0.71166533, 7.70092e-07, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kwwsf"]
+_surfaces = [{
+"aabb": AABB(-0.168274, -0.499957, -0.194305, 0.336548, 0.998121, 0.291458),
+"attribute_data": PackedByteArray("/z//v/8/joI0dbfeNPW33v+/joLKirfe/z//vzR1t97KCrfe/z//v8oKt97/P46CNHW33v8/joL/P/+/yoq33v+/joI09bfeygq33jR1t97/P/+//z+OgsoKt97/P/+/"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcA"),
+"name": "Cone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/3///6mq+d3/f1OcAAD53f//U5z///nd//9TnP///z//f1OcAAD/PwAAU5z///8//3///6mq+on//1Oc///6iQAAU5z///qJ/3///6mq+d0AAFOc///53f9/U5wAAPndWb0unZDT0B7/fy6d3FjQHv9/AACpqtAepUIunZDT/7//fy6d3Fj/v1m9Lp2Q0/+/pUIunZDT6HxZvS6dkNPofP9/AACpquh8/38undxY0B6lQi6dkNPQHv9/AACpqtAeT7ojVE+6I1RPuiNUAAD/fwAA/38AAP9/////f////3////9/ItSvxSLUr8Ui1K/F8C9UNPAvVDTwL1Q0////f////3////9/AAD/fwAA/38AAP9/qkvvr6pL76+qS++v")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d56as")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7872"]
+albedo_color = Color(0.4611975, 0.59850746, 1, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_84cde"]
+_surfaces = [{
+"aabb": AABB(-0.168274, -0.499957, -0.194305, 0.336548, 0.998121, 0.291458),
+"attribute_data": PackedByteArray("/z//v/8/joI0dbfeNPW33v+/joLKirfe/z//vzR1t97KCrfe/z//v8oKt97/P46CNHW33v8/joL/P/+/yoq33v+/joI09bfeygq33jR1t97/P/+//z+OgsoKt97/P/+/"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcA"),
+"name": "Cone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/3///6mq+d3/f1OcAAD53f//U5z///nd//9TnP///z//f1OcAAD/PwAAU5z///8//3///6mq+on//1Oc///6iQAAU5z///qJ/3///6mq+d0AAFOc///53f9/U5wAAPndWb0unZDT0B7/fy6d3FjQHv9/AACpqtAepUIunZDT/7//fy6d3Fj/v1m9Lp2Q0/+/pUIunZDT6HxZvS6dkNPofP9/AACpquh8/38undxY0B6lQi6dkNPQHv9/AACpqtAeT7ojVE+6I1RPuiNUAAD/fwAA/38AAP9/////f////3////9/ItSvxSLUr8Ui1K/F8C9UNPAvVDTwL1Q0////f////3////9/AAD/fwAA/38AAP9/qkvvr6pL76+qS++v")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d56as")
+
+[sub_resource type="SphereMesh" id="SphereMesh_r0ldw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxp7r"]
+albedo_color = Color(0.75214237, 0, 0.27110317, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rggrn"]
+albedo_color = Color(0.8998819, 0.6362824, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwwsf"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_dxp7r"]
+
+[node name="Node3D" type="Node3D" unique_id=357912738]
+
+[node name="Center" type="Node3D" parent="." unique_id=27907345]
+
+[node name="Size" type="Node3D" parent="Center" unique_id=2095723081]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="DirectionX" type="MeshInstance3D" parent="Center/Size" unique_id=335945419 node_paths=PackedStringArray("target_mesh")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.49587417, 0, 0)
+mesh = SubResource("ArrayMesh_dxp7r")
+surface_material_override/0 = SubResource("StandardMaterial3D_3nuck")
+script = ExtResource("1_r0ldw")
+color = Color(0.99696165, 0.35912493, 0.57795936, 1)
+target_mesh = NodePath(".")
+
+[node name="DirectionY" type="MeshInstance3D" parent="Center/Size" unique_id=1978279789 node_paths=PackedStringArray("target_mesh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513405, 0)
+mesh = SubResource("ArrayMesh_rggrn")
+surface_material_override/0 = SubResource("StandardMaterial3D_3cph6")
+script = ExtResource("1_r0ldw")
+color = Color(0.44494945, 0.71166533, 7.70092e-07, 1)
+target_mesh = NodePath(".")
+
+[node name="DirectionUnityZ" type="MeshInstance3D" parent="Center/Size" unique_id=1372934796 node_paths=PackedStringArray("target_mesh")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -0.50589174)
+mesh = SubResource("ArrayMesh_kwwsf")
+surface_material_override/0 = SubResource("StandardMaterial3D_v7872")
+script = ExtResource("1_r0ldw")
+color = Color(0.4611975, 0.59850746, 1, 1)
+target_mesh = NodePath(".")
+
+[node name="DirectionGodotZ" type="MeshInstance3D" parent="Center/Size" unique_id=1415205659 node_paths=PackedStringArray("target_mesh")]
+transform = Transform3D(0.355, 0, 0, 0, -1.5517543e-08, -0.355, 0, 0.355, -1.5517543e-08, 0, 0, 0.18800244)
+mesh = SubResource("ArrayMesh_84cde")
+surface_material_override/0 = SubResource("StandardMaterial3D_v7872")
+script = ExtResource("1_r0ldw")
+color = Color(0.4611975, 0.59850746, 1, 1)
+target_mesh = NodePath(".")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=721163509]
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=347193618]
+anchors_preset = -1
+anchor_top = 0.016
+anchor_right = 0.312
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -0.20000029
+offset_right = -6.600006
+offset_bottom = -4.0
+
+[node name="LabelNesDebug" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1181414012]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "
+	DIR: 0.00,0.00,0.00,
+	ROLL X: 90.00
+	PITCH Z: 90.00
+	YAW Y: 90.00
+	JOYSTICK: 1.00,1.00
+	"
+
+[node name="LabelQuestDebug" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1608246330]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "
+	DIR: 0.00,0.00,0.00,
+	ROLL X: 90.00
+	PITCH Z: 90.00
+	YAW Y: 90.00
+	JOYSTICK: 1.00,1.00
+	"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1842331221]
+transform = Transform3D(0.8919002, -0.23961733, 0.3835331, 0, 0.8480886, 0.5298545, -0.45223236, -0.4725773, 0.75641036, 0.767877, 0.8400755, 0.798604)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=2070294387]
+
+[node name="NesDirectionZeroDebug" type="MeshInstance3D" parent="." unique_id=566342768]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, -0.6289414)
+mesh = SubResource("SphereMesh_r0ldw")
+surface_material_override/0 = SubResource("StandardMaterial3D_dxp7r")
+
+[node name="NesDirectionDirectionAtZero" type="MeshInstance3D" parent="." unique_id=557289446]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+mesh = SubResource("SphereMesh_r0ldw")
+surface_material_override/0 = SubResource("StandardMaterial3D_rggrn")
+
+[node name="NesDirectionQuest" type="MeshInstance3D" parent="." unique_id=703488001]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, -1.0281464)
+mesh = SubResource("SphereMesh_r0ldw")
+surface_material_override/0 = SubResource("StandardMaterial3D_kwwsf")
+
+[node name="QuestJoystickFromController" parent="." unique_id=1029765999 instance=ExtResource("2_r0ldw")]
+transform = Transform3D(0.4916541, -0.1546706, 0.8569441, -0.18163133, 0.9442385, 0.27463374, -0.85163736, -0.2906727, 0.43614575, 0.54280037, 0.5634502, 0.25810286)
+
+[node name="HeadAnchor" parent="QuestJoystickFromController/Joystick" parent_id_path=PackedInt32Array(1029765999, 221657654) index="1" unique_id=242588583]
+transform = Transform3D(0.03, 1.4901111e-08, -9.406358e-08, -1.490116e-08, 0.03, -1.583243e-08, 9.406357e-08, 1.5832477e-08, 0.03, 0.03856726, 0.0472728, -0.029544234)
+
+[node name="MiddleStickAnchor" parent="QuestJoystickFromController/Joystick" parent_id_path=PackedInt32Array(1029765999, 221657654) index="3" unique_id=484823412]
+transform = Transform3D(0.009852019, -0.00591382, -0.03856725, -0.0013704683, 0.012068145, -0.035209484, 0.011227624, 0.006662325, 0.029544255, 0.019283615, 0.029668108, -0.014772117)
+
+[node name="JoystickAndNES" parent="." unique_id=1996325788 instance=ExtResource("8_84cde")]
+
+[node name="MiniCarFromJoystickQuest" parent="." unique_id=1584812126 instance=ExtResource("4_dxp7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29621094, 0, -0.15106982)
+
+[node name="MiniCarFromJoystickNes" parent="." unique_id=780528643 instance=ExtResource("4_dxp7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44047093, 0, -0.15106982)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=284247971]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=663410846]
+shape = SubResource("WorldBoundaryShape3D_dxp7r")
+
+[connection signal="on_joystick_updated" from="QuestJoystickFromController/Code/RollPitchYawFromDirection" to="MiniCarFromJoystickQuest" method="set_joystick"]
+[connection signal="on_text_debug" from="QuestJoystickFromController/Code/RollPitchYawFromDirection" to="CanvasLayer/HBoxContainer/LabelQuestDebug" method="set_text"]
+[connection signal="on_joystick_simulation_updated" from="JoystickAndNES/NES/FowardDirection/RollPitchYawFromNode3D" to="MiniCarFromJoystickNes" method="set_joystick"]
+[connection signal="on_text_debug" from="JoystickAndNES/NES/FowardDirection/RollPitchYawFromNode3D" to="CanvasLayer/HBoxContainer/LabelNesDebug" method="set_text"]
+
+[editable path="QuestJoystickFromController"]
+[editable path="JoystickAndNES"]
