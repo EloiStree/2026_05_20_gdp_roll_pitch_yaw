@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://b1p85o6a0nqdf"]
 
-[ext_resource type="Script" uid="uid://bf1t8hcit5wjm" path="res://addons/2026_05_19_gdp_gizmo_debug/script/gizmo_change_color_mesh_instance_tool.gd" id="1_r0ldw"]
 [ext_resource type="PackedScene" uid="uid://6ikslca4ei8e" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/scene/element/quest_joystick_from_controller.tscn" id="2_r0ldw"]
 [ext_resource type="PackedScene" uid="uid://ccafivnarbher" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/scene/element/mini_car_from_joystick.tscn" id="4_dxp7r"]
 [ext_resource type="PackedScene" uid="uid://bevotsrh5u3h0" path="res://addons/2026_05_20_gdp_roll_pitch_yaw/scene/element/joystick_and_nes.tscn" id="8_84cde"]
@@ -112,37 +111,25 @@ albedo_color = Color(0, 1, 1, 1)
 [node name="Size" type="Node3D" parent="Center" unique_id=2095723081]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="DirectionX" type="MeshInstance3D" parent="Center/Size" unique_id=335945419 node_paths=PackedStringArray("target_mesh")]
+[node name="DirectionX" type="MeshInstance3D" parent="Center/Size" unique_id=335945419]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.49587417, 0, 0)
 mesh = SubResource("ArrayMesh_dxp7r")
 surface_material_override/0 = SubResource("StandardMaterial3D_3nuck")
-script = ExtResource("1_r0ldw")
-color = Color(0.99696165, 0.35912493, 0.57795936, 1)
-target_mesh = NodePath(".")
 
-[node name="DirectionY" type="MeshInstance3D" parent="Center/Size" unique_id=1978279789 node_paths=PackedStringArray("target_mesh")]
+[node name="DirectionY" type="MeshInstance3D" parent="Center/Size" unique_id=1978279789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513405, 0)
 mesh = SubResource("ArrayMesh_rggrn")
 surface_material_override/0 = SubResource("StandardMaterial3D_3cph6")
-script = ExtResource("1_r0ldw")
-color = Color(0.44494945, 0.71166533, 7.70092e-07, 1)
-target_mesh = NodePath(".")
 
-[node name="DirectionUnityZ" type="MeshInstance3D" parent="Center/Size" unique_id=1372934796 node_paths=PackedStringArray("target_mesh")]
+[node name="DirectionUnityZ" type="MeshInstance3D" parent="Center/Size" unique_id=1372934796]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -0.50589174)
 mesh = SubResource("ArrayMesh_kwwsf")
 surface_material_override/0 = SubResource("StandardMaterial3D_v7872")
-script = ExtResource("1_r0ldw")
-color = Color(0.4611975, 0.59850746, 1, 1)
-target_mesh = NodePath(".")
 
-[node name="DirectionGodotZ" type="MeshInstance3D" parent="Center/Size" unique_id=1415205659 node_paths=PackedStringArray("target_mesh")]
+[node name="DirectionGodotZ" type="MeshInstance3D" parent="Center/Size" unique_id=1415205659]
 transform = Transform3D(0.355, 0, 0, 0, -1.5517543e-08, -0.355, 0, 0.355, -1.5517543e-08, 0, 0, 0.18800244)
 mesh = SubResource("ArrayMesh_84cde")
 surface_material_override/0 = SubResource("StandardMaterial3D_v7872")
-script = ExtResource("1_r0ldw")
-color = Color(0.4611975, 0.59850746, 1, 1)
-target_mesh = NodePath(".")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=721163509]
 
@@ -164,7 +151,13 @@ text = "-"
 [node name="LabelQuestDebug" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1608246330]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "-"
+text = "
+	DIR: 0.00,0.00,0.00,
+	ROLL X: 90.00
+	PITCH Z: 90.00
+	YAW Y: 90.00
+	JOYSTICK: 1.00,1.00
+	"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1842331221]
 transform = Transform3D(0.8919002, -0.23961733, 0.3835331, 0, 0.8480886, 0.5298545, -0.45223236, -0.4725773, 0.75641036, 0.767877, 0.8400755, 0.798604)
